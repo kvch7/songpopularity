@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ultra&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="\static\css\styles.css">
+    <style>
+          
+            .container{
+              position: center;
+              padding-top: 1px;
+              padding-left:350px;
+            }
+            .container{
+              position: center;
+              padding-top: 1px;
+              padding-left:350px;
+            }
+           
+           
+           h1{
+             padding-left: 550px;
+           }
+          
+           
+           .button1 btn-outline-warning{font-size: 20px;}
+           .button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body{background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 24%);}
+    </style>
+
+
+    <title>Song Popularity</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Song Popularity</h1>
+    </header>
+
+    <br>
+    <div class="container">
+
+        <form action="/predict" method="POST">
+          <div class="row">
+          <div class="col-3">
+          <label for="song_duration_ms">Song Duration:</label><br>
+            <input type="text" name="song_duration_ms" placeholder="song_duration_ms" required="required">
+            <br>
+            <label for="acousticness">Acousticness:</label><br>
+            <input type="text" name="acousticness" placeholder="acousticness" required="required">
+            <br>
+            <label for="danceability">Danceability:</label><br>
+            <input type="text" name="danceability" placeholder="danceability" required="required">
+            <br>
+            <label for="energy">Energy:</label><br>
+            <input type="text" name="energy" placeholder="energy" required="required">
+            <br>
+            <label for="instrumentalness">instrumentalness:</label><br>
+            <input type="text" name="instrumentalness" placeholder="instrumentalness" required="required">
+            <br>
+            <label for="key">Key:</label><br>
+            <input type="text" name="	key" placeholder="key" required="required">
+            <br>
+         
+            <label  for="liveness">Liveness:</label><br>
+            <input type="text" name="liveness" placeholder="liveness" required="required">
+            <br> </div>
+            <div class="col-6">
+            <label for="loudness">Loudness:</label><br>
+            <input type="text" name="loudness" placeholder="loudness" required="required">
+            <br>
+            <label for="audio_mode">AudioMode:</label><br>
+            <input type="text" name="audio_mode" placeholder="audio_mode" required="required">
+            <br>
+            <label for="speechiness">speechiness:</label><br>
+            <input type="text" name="speechiness	" placeholder="speechiness" required="required">
+            <br>
+            <label for="tempo">Tempo:</label><br>
+            <input type="text" name="tempo" placeholder="tempo" required="required">
+            <br>
+            <label for="time_signature">TimeSignature:</label><br>
+            <input type="text" name="time_signature" placeholder="time_signature" required="required">
+            <br>
+            <label for="audio_valence">AudioValence:</label><br>
+               <input type="text" name="audio_valence" placeholder="audio_valence" required="required">
+            <br>  
+          </div>
+          </div>
+            <button type="submit" class="button button1">Predict</button>
+
+        </form>
+
+      </div>
+        
+
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
